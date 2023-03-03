@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="contato.css">
+    <title>Contato</title>
+</head>
+<body>
+<header> <!--tag cabeçalho-->
+    <div id="caixa">
+        <h1><img src="imagensSegundaPag/logo.png" alt="logo"></h1>
+        <nav>
+            <ul>
+                <li><a href="principal.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav> 
+     </div>
+</header>
+
+<main> <!--tag principal-->
+    <form> <!--tag formuçário-->
+        <label for="NomeSobrenome">Nome e Sobrenome</label> <!--Todo input precisa de label para referênciar o input-->
+        <input type="text" id="NomeSobremone" class="input-padrao" required> 
+        <!--Required para deixar o campo obrigatório-->
+        <!--Placeholder para autopreencher com algo até que se se digíte algo-->
+        <label for="email">E-mail</label> 
+        <input type="email" id="email" class="input-padrao" placeholder="seuEmail@domínio.com" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" class="input-padrao" placeholder="(XX) XXXXX-XXXX"required>
+       
+        <label for="Mensagem">Mensagem</label>
+        <textarea name="Mensagem" id="Mensagem" cols="68" rows="10" class="input-padrao"></textarea> <!--Cria uma caixa de texto que permite controlar o número de colunas e linhas-->
+
+        <!--Quando temos varios campos referentes a um mesmo assunto podemos retirar o div e usar a tag fieldset que tem como título a tag legend-->
+        <fieldset>
+            <legend>Como prefere o nosso contato ?</legend>
+            <label for="radio-email">
+                <input type="radio" name="contato" value="email" id="radio-email">
+                E-mail</label> 
+            <label for="radio-telefone">
+                <input type="radio" name="contato"  value="telefone" id="radio-telefone">
+                Telefone</label>
+            <label for="radio-whatzapp">
+                <input type="radio"  name="contato" value="whatzapp" id="radio-whatzapp" checked>
+                WhatzApp</label>   
+            <!--Colocamos o name para informar que todos fazem parte do mesmo grupo e assim quando marcar um desmarca outro-->
+            <!--Logo após tivemos que colocar todos os inputs da div contato dentro do label para o input ficar antes do label-->
+            <!--Mas tivemos um problema pois colocamos no css para todos os inputs serem do tipo block, nesse aqui vamos ter que alterar pois os inputs estão em uma linha e os labels em outra-->
+            <!--Vamos colocar uma classe para todos os inputs e o textarea que queremos essa configuração que está la no css em form input e deixar de fora essa div contato, assim somente a div input não herdará essas configurações-->
+            <!--Mudamos de form input, form textarea para input-padrao-->  
+            <!--Depois colocamos checked nos inputs para inciar a página com algum marcado--> 
+        </fieldset>
+        <!--Aqui também mudamos de div para fieldset por se tratar de somente um assunto e depois retiramos a tag p e colocamos legend-->
+        <fieldset class="horarioDeAtendimento">
+            <legend>Qual horário prefere ser atendido ?</legend>
+            <!--Vamos criar um seletor para perguntar qual horário o cliente prefere ser atendido-->
+            <!--Para isso vamos usar um seletor que não é um input e sim uma tag <select> comopções dentro-->
+            <select>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
+        </fieldset>
+
+        <!--Podemos colocar um input dentro de uma label-->
+        <label id="checkbox">
+            <input type="checkbox" checked>
+            Deseja receber novidades por e-mail ?</label>
+        <!--Nesse caso criamos um checkbox para marcar ou desmarcar-->
+        <!--Em seguida colocamos um checked dentro do input para já iniciar marcado-->
+         
+        <input type="submit" id="enviar" value="Enviar Formulário" id="enviar">   
+        <!--input do tipo enviar para enviar os dados do formulário-->
+       <!--O submit precisa de value para mostrar o valor da caixa-->
+    </form>  
+    
+    <!--tag tabela-->
+    <!--Uma linha na tabela é uma <tr></tr> e nessa página vamos ter 4 linhas-->
+    <!--e as células da tabela se chamam <td></td> aqui teremos duas em cada linha-->
+    <!--Assim como no html temos o cabeçalho e corpo, na tabela também temos as tags ideais para deixar mais semântico-->
+    <!--São elas o <thead></thead> para cabeçalho e assim mudamos a célula <td> para <th></th>-->
+    <!--E o <tbody> para o conteúdo da tábela-->
+        <!--Ainda adionei o colspan="2" que é para o contúdo ocupar duas células e assim ficar proporcional com a tabela -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Horário de Funcionamento</th> 
+            </tr>
+            <tr>
+                <th>Dia</th>
+                <th>Horário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Segunda</td>
+                <td>8h ~ 20h</td>
+            </tr>
+            <tr>
+                <td>Quarta</td>
+                <td>8h ~ 20h</td>
+            </tr>
+            <tr>
+                <td>Sexta</td>
+                <td>8h ~ 20h</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<footer> <!--tag rodapé-->
+    <img src="imagensSegundaPag/logo-branco.png" alt="Logo">
+    <p id="copyright">&copy; Copyright Barbearia Alura-2022</p>
+</footer>
+</body>
+</html>

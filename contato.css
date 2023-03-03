@@ -1,0 +1,124 @@
+header {
+    background: #BBBBBB;
+    padding-top: 20px;
+    border-radius: 0 0 0 55px;
+}
+
+
+#caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    right: 0;
+    top: 125px;
+}
+
+nav li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: darkcyan;
+    text-decoration: underline; /*colocar a linha de link novamnete quando passarmos o mouse por cima dos links*/
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+main {
+    width: 940px;  /*Centralizar o main*/
+    margin: 0 auto;
+}
+
+form {
+    margin: 50px 0; /*Espaçamento externo superior e inferior */
+}
+
+form label, form legend { /*Aplicando as mesmas configurações do form label para o form p que depois mudamos para legend porque usamos o fieldset*/
+    display: block; /*Todos os labels no meu form vão ser display block, para ficar um em baixo do outro*/
+    font-size: 20px;
+    margin: 10px 0; /*Melhorar o espaçamento do label para os inputs*/
+}
+
+.input-padrao { /*Aqui estou aplicando as mesmas configurações do form imput para o form textarea*/
+    display: block; /*Todos os inputs no meu form vão ser display block, para ficar um em baixo do outro*/
+    width: 50%; /*Meu input vai ocupar 50% da página*/
+    padding: 10px 25px; /*Melhorar o espaçamento interno*/
+    margin: 15px 0;
+}
+
+.horarioDeAtendimento legend { /*Aumentar um pouco um espaçamento externo superior do parágrafo do seletor*/
+    margin-top: 15px;
+}
+
+.horarioDeAtendimento select {
+    width: 10%;  /*Aumentei um pouco a largura do seletor*/
+}
+
+#checkbox { /*Espaçamento do checkbox*/
+     margin: 20px 0;
+}
+
+#enviar {  /*Botão de enviar*/
+    width: 30%;
+    padding: 13px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    background-color: orange;
+    color: white;
+    transition: 0.5s; /*Transição de cor quando passar o mouse pelo enviar*/
+}
+
+#enviar:hover { /*Configurações de quando eu passsar o mouse por cima do enviar*/
+    background: orangered;
+    cursor: pointer; /*mudar cursor do mouse para a mãozinha*/
+    transform: scale(1.1);
+     /*aumentar o tamanho proporcionalmente de todos os itens do enviar e para colocar mais um trasform e só dar espaço e adicionar dentro desse mesmo transform*/
+}
+
+table {
+    margin: 15px 10px 30px; /*cima, lateral, baixo*/
+}
+
+thead {
+    background: orangered;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+td, th {
+    border: 1px solid black; /*A primeira linha não pegou pq está com th então juntamos com esse seletor do th com uma virgula.*/
+    padding: 8px 15px;
+}   
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+footer {
+    background: url(imagensSegundaPag/bg.jpg);
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 0 55px 0 0;
+}
+
+#copyright {
+    color: white;
+    padding-top: 10px;
+    font-size: 14px;
+}

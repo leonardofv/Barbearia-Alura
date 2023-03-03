@@ -1,0 +1,189 @@
+/*Importando fontes do google fontes*/
+@import url('https://fonts.googleapis.com/css2?family= Manrope: wght @200 & display=swap');
+
+body {
+    font-family: Manrope, sans-serif;
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+#caixa {
+    position: relative; /*caixa está deslocada do navegador para que o menu fique dentro da caixa*/
+    width: 940px;
+    margin: 0 auto; /*espaçamento externo da caixa para calcular automatico*/
+}
+
+nav {
+    position: absolute; /*Para indicar uma nova posição*/
+    top: 125px; /*Para que tenha 125px em relação ao topo*/
+    right: 0px;
+}
+
+nav li {
+    display: inline; /*Para o menu ficar em linha, por padrão vem block */
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase; /*Transformar em Maiúscula*/
+    color: black;
+    text-decoration: none; /*Tirar toda a decoração*/
+    font-weight: bold; /*Peso da fonte*/
+    font-size: 25px;  /*Tamanho da fonte*/
+}
+
+nav a:hover{  /*Qunado passar o mouse por cima dos link na tag nav*/
+    color: darkcyan;
+    text-decoration: underline; /*para colocar a linha de link novamente quando passarmos o mouse sobre os link*/
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#banner {
+    width: 100%;
+}
+
+.principal {   
+    padding: 3em 0;  /*espaçamento interno na classe principal*/
+    width: 940px;   /*Largura*/
+    margin: 0 auto;  /*Centralizar automatico*/
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em; /*para que tenha duas vezes do tamanho padrão da fonte*/
+    margin: 0 0 1em;
+    clear: left; /*O float atinge toda a página dele para baixo e para isso usamos esse comando com o lado da sombra que foi usado no float*/
+    color: rgba(0,0,0,0.5); /*Camada rgb alfa. COloca uma opacidade*/
+    transition: 0.5s;
+}
+
+.titulo-principal:hover { /*Quando eu passar o mouse por cima do titulo ele remove a opacidade*/
+    color: rgb(0,0,0);
+}
+
+.utensilios {
+    width: 120px;
+    float: left; /*para a imagem levantar da página e deixar os outros elementos ao redor*/
+    margin: 0 20px 20px 0; /*Espaçamento da imagem para os parágrafos*/
+    box-shadow: 3px 6px 10px rgba(0,0,0,0.6); /*SOmbra com uma opacidade de 60%*/
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {  /*Os em que estão dentro da classe principal vão ficar em ítalico*/
+    font-style: italic; 
+}
+
+.mapa { 
+    padding: 2em 0;  /*Espacamento interno do mapa*/
+    background: linear-gradient(rgba(255, 255, 255, 0.24), #888888); /*background da cor do footer para o branco*/
+}
+
+.conteudo-mapa { /*criei essa classe para centralizar somente o mapa, pois se colocasse no .mapa o backgound não ocuparia toda a página*/
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;   /*Espacamento externo e centralização do parágrafo*/
+    text-align: center;
+}
+
+.beneficios {
+    padding: 2em;
+    background: #888888; /*Quando coloquei a cor não ocupou toda a página pq colocamos a centralização no main, temos que retirar e adicionar em cada um dos elementos, principal e mapa em beneficios não precisou pq já está centralizado*/
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block; /*Para a imagem ficar do lado da lista dos benefícios*/
+    vertical-align: top; /*Lista alinhada na parte superior*/
+}
+
+.lista-beneficios :before { /*Colocar qualquer coisa antes de qualquer elemento. Para colocar depois do elemento utilizamos o after{}*/
+    content: "✰ ";
+}
+
+/*Colocar negrito em determinada linha com psedoelementos
+:first-child - coloca o primero da lista em Negrito
+:last-child - último da lista em Negrito
+:nth-child() - elemento qualquer da lista é só colocar entre os parenteses o número desejado  ainda é possível colocar o valor de n e calcular todos os pares da lista ex: 2n */
+.itens:first-child, .itens:last-child { /*Aqui estou colocando o primeiro e o último elemento da lista em negrito*/
+    font-weight: bold;
+}
+
+.itens { /*Conteúdo do ul*/
+    line-height: 1.5; /*Altura da linha*/
+}
+
+.imagem-beneficios { /*Diminuir o tamanho da imagem ao lado dos benefícios*/
+    width: 60%;
+    opacity: 1;
+    transition: 0.5s; /*Velocidade da trasição da opacidade do hover*/
+    box-shadow: 10px 10px 30px black; /*Sombra na imagem ao lado dos benefícios, para sombra interna -> inset 0 0 tantos pxs*/
+}
+
+.imagem-beneficios:hover {  /*Quando passo o mouse pela imagem ela tem uma opacidade de 70%*/
+    opacity: 0.7;
+   
+}
+
+.video {
+    width: 560px; /*mesma largura do iframe*/
+    margin: 3em auto; /*Espacamento externo para cima e para ficar centralizado*/
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+footer {
+    background: url(imagensSegundaPag/bg.jpg);
+    text-align: center;
+    padding: 50px 0;
+}
+
+#copyright {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*------------------------------------------------------------Configurações para celulares-----------------------------------------------------*/
+
+@media screen and (max-width: 820px){
+    #caixa, .principal, .video {
+        width: auto;         
+    }
+
+    .conteudo-beneficios, .imagem-beneficios {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .conteudo-mapa {
+        width: auto;
+        padding: 5px 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+}

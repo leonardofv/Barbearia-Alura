@@ -1,0 +1,101 @@
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+    border-radius: 0 0 50px 0; /*Criar uma borda na imagem do cabeçalho*/
+}
+
+#caixa {
+    position: relative; /*caixa está deslocada do navegador para que o menu fique dentro da caixa*/
+    width: 940px;
+    margin: 0 auto; /*espaçamento externo da caixa para calcular automatico*/
+}
+
+nav {
+    position: absolute; /*Para indicar uma nova posição*/
+    top: 125px; /*Para que tenha 125px em relação ao topo*/
+    right: 0px;
+}
+
+nav li {
+    display: inline; /*Para o menu ficar em linha, por padrão vem block */
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase; /*Transformar em Maiúscula*/
+    color: black;
+    text-decoration: none; /*Tirar toda a decoração*/
+    font-weight: bolder; /*Peso da fonte*/
+    font-size: 25px;  /*Tamanho da fonte*/
+}
+
+nav a:hover{  /*Qunado passar o mouse por cima dos link na tag nav*/
+    color: darkcyan;
+    text-decoration: underline; /*para colocar a linha de link novamente quando passarmos o mouse sobre os link*/
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;  /*Coloquei para centralizar como fiz no header*/;
+    padding: 50px 0; /*Espaçamento interno da caixa dos produtos*/
+}
+
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top; /*Para orientar pela linha de cima, quando usamos line-block sempre orienta pela linha de baixo*/
+    margin: 0 4px; /*espaçamento externo para separar um pouco*/
+    padding-top: 20px; /*Espaçamento interno*/
+    box-sizing: border-box; /*Com isso meus 30% de largura das li serão definitivos e os pixeis do padding estão dentro dos 30%*/
+    border: 3px solid black;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.produtos li:hover { /*Quando passar o mouse por cima das li*/
+    border-color: darkcyan;
+}
+
+.produtos li:hover h2 { /*Quando passar o mouse pelos produtos aumenta a fonte*/
+    font-size: 35px;
+    transition: 0.5s; /*transição de meio segundo para aumentar o h2*/
+}
+
+.produtos li:hover .preco-produto { /*Aumenta o preço do produto quando passo o mouse pelos produtos*/
+   font-size: 30px;
+   transition: 0.5s;
+}
+
+.produtos h2{  /*Mudar tamanho e peso do título*/
+    font-size: 30px;   
+    font-weight: bold;
+}
+
+.descricao-produto{  /*Alterar descrição do produto*/
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.preco-produto{    /*alterar preço do produto*/
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+footer {
+    background: url(imagensSegundaPag/bg.jpg); /*Quando eu quero passar um link, nesse caso foi uma imagem que está na pasta do projeto*/
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 50px 0 0 0 ;
+}
+
+#rodape {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
